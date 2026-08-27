@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Cliff Notes Downloader PRO",
+  "version": "2.0",
+  "permissions": [
+    "downloads"
+  ],
+  "host_permissions": [
+    "*://*.cliffsnotes.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.cliffsnotes.com/*"
+      ],
+      "js": [
+        "jspdf.umd.min.js",
+        "html2canvas.min.js",
+        "jszip.min.js",
+        "content.js"
+      ]
+    }
+  ]
+}

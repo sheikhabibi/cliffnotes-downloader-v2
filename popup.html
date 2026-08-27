@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <span>*CliffNotes Downloader*</span>
+            <span class="gear">⚙</span>
+        </div>
+        
+        <div class="main-text">
+            <p>Output format is</p>
+            
+            <div class="options">
+                <label class="option-label active" id="label-pdf">
+                    <input type="radio" name="format" value="pdf" checked>
+                    PDF DOCUMENT
+                </label>
+                
+                <p class="conjunction">or</p>
+                
+                <label class="option-label" id="label-zip">
+                    <input type="radio" name="format" value="zip">
+                    ZIP ARCHIVE
+                </label>
+            </div>
+            
+            <p class="description">Select format to extract.</p>
+        </div>
+
+        <div id="errorBox" class="error" style="display: none;"></div>
+
+        <div class="footer">
+            <button id="downloadBtn" class="button">> Extract Now_</button>
+            <button id="pauseBtn" class="button" style="display: none; margin-top: 10px; border-style: dashed;">> Pause_</button>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
